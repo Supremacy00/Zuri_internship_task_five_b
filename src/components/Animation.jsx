@@ -1,4 +1,4 @@
-// YourPage.js
+
 import  { useState } from 'react';
 import Assistant from './Assistant';
 
@@ -18,7 +18,7 @@ const Animation = () => {
       isVisible: true,
     });
 
-    // Hide the assistant after a delay (adjust the delay as needed)
+   
     setTimeout(hideAssistant, 5000);
   };
 
@@ -31,7 +31,7 @@ const Animation = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      {/* Your Buttons */}
+    
       {[1, 2, 3].map((buttonNumber) => (
         <button
           key={buttonNumber}
@@ -43,10 +43,7 @@ const Animation = () => {
         </button>
       ))}
 
-      {/* Assistant Component */}
       <Assistant {...assistantState} />
-
-      {/* Event listener to hide assistant when clicking outside of it */}
       <div className="fixed inset-0" onClick={hideAssistant} />
     </div>
   );
